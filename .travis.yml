@@ -19,5 +19,10 @@ android:
 
     # Specify at least one system image,
     # if you need to run emulator(s) during your tests
-before_deploy:
-  - ls -R
+deploy:
+  provider: releases
+  api_key: "f342d44b2552b39e856645d1f729371f3e9876a3"
+  file: "/home/travis/build/Doplgangr/secrecy/app/app-debug.apk"
+  skip_cleanup: true
+  on:
+    tags: true
